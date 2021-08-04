@@ -1,0 +1,117 @@
+.footer {
+    color: #fff;
+    background-color: $theme-black;
+
+    .logo-img {
+        margin-top: 150px;
+        margin-bottom: 50px;
+        padding-right: 30px;
+
+        img {
+            max-width: 100%;
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    &-box {
+        z-index: 1;
+        position: relative;
+        height: 100%;
+        padding: 120px 80px 120px 120px;
+
+        &-bg {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70vw;
+            height: 100%;
+
+            &::after {
+                content: "";
+                @include absoldefault;
+                background-color: $theme-black;
+                mix-blend-mode: multiply
+            }
+
+            img {
+                @include imgfit;
+            }
+        }
+
+        .navigation {
+            margin: 0px 0 30px;
+        }
+
+        .nav-list {
+            >li {
+                >a {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .infoboxes {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .infobox {
+            flex: 0 0 50%;
+            max-width: 50%;
+            margin-bottom: 20px;
+
+            .media {
+                flex: 0 0 55px;
+                max-width: 55px;
+                padding: 10px;
+                border: 2px solid $theme;
+            }
+
+            .text {
+                flex: 0 0 calc(100% - 55px);
+                max-width: calc(100% - 55px);
+
+                p {
+                    color: #fff;
+                    opacity: .75;
+                }
+
+                a,
+                span {
+                    color: #fff;
+                }
+
+                a:hover {
+                    color: $theme-accent;
+                }
+            }
+        }
+    }
+
+    &-bot {
+        padding: 20px 0;
+        background-color: #000;
+
+        p {
+            font-family: $font;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        a {
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+
+        img {
+            height: 20px;
+            filter: brightness(0) invert(1);
+        }
+    }
+}

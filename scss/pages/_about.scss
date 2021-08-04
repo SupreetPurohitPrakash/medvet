@@ -1,0 +1,92 @@
+.about {
+    .media {
+        height: 480px;
+
+        &-sm {
+            height: 380px
+        }
+
+    }
+
+    img {
+        @include imgfit;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.section-aboutquals {
+    padding-top: 0;
+
+    .container {
+        max-width: 100%;
+        padding: 0 100px;
+    }
+
+    .section-bg {
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::after {
+            content: "";
+            @include absoldefault;
+            background-color: $theme-black;
+            mix-blend-mode: multiply;
+            opacity: .6;
+        }
+    }
+}
+
+.aboutquals {
+    .section-head {
+        color: #fff;
+        padding: 80px 0 220px;
+        position: relative;
+        margin-bottom: -170px;
+
+        .heading-sub {
+            color: #fff;
+        }
+    }
+
+    .row {
+        z-index: 1;
+        position: relative;
+        margin: 0 -20px;
+    }
+
+    [class^="col-"] {
+        padding: 0 20px;
+    }
+
+    &-card {
+        padding: 50px 40px 40px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0px 5px 30px 0px rgba(#000, 0.15);
+
+        img {
+            height: 75px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 20px 0 10px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+            transition: all .3s ease-out;
+        }
+
+        &:hover {
+            p {}
+        }
+    }
+}

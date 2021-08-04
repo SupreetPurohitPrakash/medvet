@@ -1,0 +1,122 @@
+.header {
+    z-index: 99;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+
+    .container {}
+
+    .logo {
+        width: 280px;
+        max-width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .nav-list {
+        >li {
+
+            &:last-child {
+                margin-left: auto;
+
+                >a {
+                    color: #fff;
+                    font-weight: 500;
+                    line-height: normal;
+                    padding: 12px 35px;
+                    text-transform: uppercase;
+                    background-color: $theme;
+                    background: linear-gradient(to right, $theme 50%, #fff 50%);
+                    background-size: 201% 100%;
+                    background-position-x: 0%;
+                    background-repeat: no-repeat;
+                    border: 2px solid $theme;
+
+                    &::after {
+                        content: "\f30b";
+                        font-family: $font-awesome;
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin-left: 10px;
+                    }
+
+                }
+
+                &.active a,
+                a:hover {
+                    color: $theme;
+                    background-position-x: 100%;
+                    box-shadow: 0 0 6px -2px rgba(#000, .25);
+                }
+
+                &.active a::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-top {
+        padding: 25px 0;
+    }
+
+    &-bot {
+        border-top: 1px solid rgba(#000, .1);
+    }
+}
+
+.infoboxes {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.infobox {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+        padding-right: 20px;
+    }
+
+    .media {
+        flex: 0 0 35px;
+        max-width: 35px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text {
+        flex: auto;
+        padding-left: 12px;
+
+        p {
+            color: $theme-lightblack;
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+
+        a,
+        span {
+            color: $theme-black;
+            font-family: $font;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        a {
+            &:hover {
+                color: $theme;
+            }
+
+            &+a {
+                margin-left: 5px;
+            }
+        }
+    }
+}

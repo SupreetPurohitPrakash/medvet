@@ -1,0 +1,84 @@
+.page-contact .footer .infoboxes {
+    display: none;
+}
+
+.section-contact {
+    padding: 0;
+}
+
+.contact {
+    [class^="col-"] {
+        padding: 100px 70px;
+
+        &:last-child {
+            color: #fff;
+            background-color: $theme-black;
+
+            p {
+                color: #fff;
+            }
+        }
+    }
+
+    .infoboxes {
+        margin: 40px 0;
+        flex-wrap: wrap;
+    }
+
+    .infobox {
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        .media {
+            flex: 0 0 40px;
+            max-width: 40px;
+
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .text {
+            padding-left: 25px;
+
+            p {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            a,
+            span {
+                color: #fff;
+                font-size: 16px;
+            }
+
+            a:hover {
+                color: $theme-secondary;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .heading-sub {
+        color: #fff;
+    }
+
+    .social-group {
+        a {
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+
+        img {
+            height: 20px;
+            max-width: 100%;
+            filter: brightness(0) invert(1);
+        }
+    }
+}

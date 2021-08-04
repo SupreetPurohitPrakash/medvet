@@ -1,0 +1,78 @@
+.link-box {
+    display: inline-block;
+    padding: 10px 35px;
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(to right, $theme 50%, #fff 50%);
+    background-size: 201% 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    border: 2px solid $theme;
+    transition: all .4s ease-out;
+    cursor: pointer;
+
+    &:hover {
+        color: $theme;
+        background-position-x: 100%;
+    }
+
+    &.has-longarrow {
+        &::after {
+            content: "\f30b";
+            font-family: $font-awesome;
+            font-size: 125%;
+            font-weight: 700;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    }
+
+    &.has-arrow-diagonal {
+        &::after {
+            content: "\f061";
+            font-family: $font-awesome;
+            font-weight: 700;
+            margin-left: 10px;
+            display: inline-block;
+            transform: rotate(45deg);
+        }
+    }
+
+    &.link-box-accent {
+        color: $theme;
+        background: linear-gradient(to right, $theme-accent 50%, $theme 50%);
+        background-size: 201% 100%;
+        border-color: $theme-accent;
+
+        &:hover {
+            color: #fff;
+            background-position-x: 100%;
+        }
+    }
+}
+
+.link-plus {
+    display: inline-block;
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+
+    &::after {
+        content: "\f067";
+        font-family: $font-awesome;
+        font-size: 80%;
+        font-weight: 700;
+        margin-left: 10px;
+        color: $theme-secondary;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

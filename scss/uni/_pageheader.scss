@@ -1,0 +1,57 @@
+.section-pageheader {
+    padding: 35px 0 10px;
+
+    .section-bg::after {
+        content: "";
+        @include absoldefault;
+        background-color: $theme-black;
+        mix-blend-mode: multiply;
+        opacity: .5;
+    }
+}
+
+.pageheader {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &-text {
+        color: #fff;
+        text-align: center;
+
+        .heading {
+            font-size: 60px;
+            text-transform: capitalize;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+    }
+
+    ul {
+        padding-left: 0;
+        list-style-type: none;
+
+        >li {
+            color: $theme-secondary;
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            >a {
+                color: $theme;
+
+                &:hover {}
+
+                &::after {
+                    content: "\f105";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 700;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}
