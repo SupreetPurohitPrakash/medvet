@@ -1,9 +1,11 @@
 .about {
     .media {
-        height: 480px;
+        @media (min-width: 992px) {
+            height: 480px;
 
-        &-sm {
-            height: 380px
+            &-sm {
+                height: 380px
+            }
         }
 
     }
@@ -14,6 +16,10 @@
 
     p {
         font-size: 18px;
+
+        @media (max-width: 991px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -22,7 +28,10 @@
 
     .container {
         max-width: 100%;
-        padding: 0 100px;
+
+        @media (min-width: 992px) {
+            padding: 0 100px;
+        }
     }
 
     .section-bg {
@@ -41,6 +50,7 @@
 }
 
 .aboutquals {
+
     .section-head {
         color: #fff;
         padding: 80px 0 220px;
@@ -59,7 +69,7 @@
     }
 
     [class^="col-"] {
-        padding: 0 20px;
+        padding: 10px 20px;
     }
 
     &-card {

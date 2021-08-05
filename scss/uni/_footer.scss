@@ -3,13 +3,32 @@
     background-color: $theme-black;
 
     .logo-img {
+        max-width: 280px;
         margin-top: 150px;
         margin-bottom: 50px;
         padding-right: 30px;
 
+        @media (max-width: 991px) {
+            margin-top: 30px;
+        }
+
         img {
             max-width: 100%;
             filter: brightness(0) invert(1);
+            transition: all .4s ease-out;
+        }
+
+    }
+
+    &-top {
+        [class^="col-"]:first-child {
+            @media (max-width: 991px) {
+                padding: 40px 55px;
+            }
+
+            .logo-img:hover img {
+                filter: none;
+            }
         }
     }
 
@@ -18,6 +37,10 @@
         position: relative;
         height: 100%;
         padding: 120px 80px 120px 120px;
+
+        @media (max-width: 991px) {
+            padding: 40px;
+        }
 
         &-bg {
             z-index: -1;
@@ -41,12 +64,36 @@
 
         .navigation {
             margin: 0px 0 30px;
+
+            @media (max-width: 991px) {
+                margin: 0 -10px 20px;
+            }
         }
 
         .nav-list {
             >li {
                 >a {
                     font-size: 20px;
+                }
+            }
+
+            @media (max-width: 991px) {
+                margin-left: 0;
+                align-items: flex-start;
+                justify-content: flex-start;
+                max-width: 100%;
+
+                >li {
+                    width: auto;
+                    text-align: left;
+
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+
+                    >a {
+                        padding: 0;
+                    }
                 }
             }
         }
@@ -60,6 +107,11 @@
             flex: 0 0 50%;
             max-width: 50%;
             margin-bottom: 20px;
+
+            @media (max-width: 567px) {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
 
             .media {
                 flex: 0 0 55px;

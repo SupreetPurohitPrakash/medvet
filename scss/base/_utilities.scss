@@ -72,6 +72,7 @@
 
   @media (max-width: 991px) {
     font-size: 28px;
+    line-height: 42px;
   }
 
   &-sub {
@@ -321,6 +322,10 @@
     padding-left: 20px;
     margin-bottom: 5px;
 
+    @media (max-width: 991px) {
+      font-size: 14px;
+    }
+
     &::before {
       color: $theme;
       content: "\f058";
@@ -339,15 +344,30 @@
   color: #fff;
   background-color: $theme;
 
+  @media (max-width: 991px) {
+    padding: 25px 20px;
+  }
+
   h3 {
     font-size: 32px;
     font-weight: 700;
+
+    @media (max-width: 991px) {
+      display: flex;
+      flex-flow: column;
+      font-size: 24px;
+    }
 
     img {
       width: 45px;
       filter: brightness(0) invert(1);
       vertical-align: middle;
       margin-right: 10px;
+
+      @media (max-width: 991px) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
     }
   }
 
