@@ -14,7 +14,6 @@
     &-card {
         position: relative;
         border: 1px solid #dedede;
-        cursor: pointer;
 
         @media (max-width: 991px) {
             flex: 0 0 100%;
@@ -69,14 +68,14 @@
         }
 
         .logo {
-            position: absolute;
-            top: 25px;
-            left: 30px;
-            max-width: 80%;
+            // position: absolute;
+            // top: 25px;
+            // left: 30px;
+            text-align: center;
             height: 90px;
-            padding: 10px;
+            padding: 20px 20px 10px;
             background-color: #fff;
-            box-shadow: 0 0 6px rgba(#000, .15);
+            // box-shadow: 0 0 6px rgba(#000, .15);
 
             img {
                 max-width: 100%;
@@ -243,6 +242,14 @@
             &::after {
                 background-color: $theme-secondary;
             }
+        }
+    }
+}
+
+.partner-content {
+    p {
+        @media (min-width: 992px) {
+            font-size: 18px;
         }
     }
 }
