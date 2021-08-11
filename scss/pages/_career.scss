@@ -1,0 +1,223 @@
+.section-careerintro {
+    padding: 30px 0 120px;
+}
+
+.careerintro {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        right: 15%;
+        width: 100%;
+        height: 75%;
+        background-color: #ddd;
+    }
+
+    .col-lg-3 {
+        @media (max-width: 991px) {
+            order: 2;
+        }
+    }
+
+    .text {
+        z-index: 1;
+        position: relative;
+        background-color: #fff;
+        padding: 56px 64px 56px 88px;
+        box-shadow: 0 0 2px rgba(#000, .1);
+
+        @media (min-width: 992px) {
+            margin-top: 70px;
+            margin-right: -230px;
+        }
+
+        @media (max-width: 991px) {
+            padding: 40px;
+            margin: -40px 40px 0;
+        }
+
+        @media (max-width: 567px) {
+            padding: 25px;
+            margin: -20px 20px 0;
+        }
+
+        .heading {
+            margin-bottom: 40px;
+
+            @media (max-width: 1200px) {
+                font-size: 30px;
+                line-height: 34px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .link-box {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 10px;
+
+            i {
+                margin-right: 5px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .media {
+        height: 550px;
+
+        @media (max-width: 991px) {
+            height: 280px;
+        }
+
+        img {
+            @include imgfit;
+        }
+    }
+}
+
+.job {
+    &-cat {
+        padding: 10px 0;
+        border: 1px solid rgba(#000, .1);
+        border-width: 1px 0;
+
+        &:not(:last-child) {
+            border-bottom: 0;
+        }
+
+        &-title {
+            font-size: 24px;
+            font-weight: 600;
+            padding-top: 15px;
+        }
+    }
+
+    &-item {
+        position: relative;
+        display: block;
+        padding: 15px 50px 15px 30px;
+
+        &+.job-item {
+            margin-top: 10px;
+        }
+
+        &::after {
+            content: "";
+            @include absoltopcenter;
+            right: 40px;
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c3ZnanM9Imh0dHA6Ly9zdmdqcy5jb20vc3ZnanMiIHZlcnNpb249IjEuMSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxnPgoJCTxwYXRoIGQ9Ik01MDYuMTM0LDI0MS44NDNjLTAuMDA2LTAuMDA2LTAuMDExLTAuMDEzLTAuMDE4LTAuMDE5bC0xMDQuNTA0LTEwNGMtNy44MjktNy43OTEtMjAuNDkyLTcuNzYyLTI4LjI4NSwwLjA2OCAgICBjLTcuNzkyLDcuODI5LTcuNzYyLDIwLjQ5MiwwLjA2NywyOC4yODRMNDQzLjU1OCwyMzZIMjBjLTExLjA0NiwwLTIwLDguOTU0LTIwLDIwYzAsMTEuMDQ2LDguOTU0LDIwLDIwLDIwaDQyMy41NTcgICAgbC03MC4xNjIsNjkuODI0Yy03LjgyOSw3Ljc5Mi03Ljg1OSwyMC40NTUtMC4wNjcsMjguMjg0YzcuNzkzLDcuODMxLDIwLjQ1Nyw3Ljg1OCwyOC4yODUsMC4wNjhsMTA0LjUwNC0xMDQgICAgYzAuMDA2LTAuMDA2LDAuMDExLTAuMDEzLDAuMDE4LTAuMDE5QzUxMy45NjgsMjYyLjMzOSw1MTMuOTQzLDI0OS42MzUsNTA2LjEzNCwyNDEuODQzeiIgZmlsbD0iIzFjYmZhMiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiIvPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4K");
+            opacity: 0;
+            transition: all .3s ease-out;
+        }
+
+        &:hover {
+            color: $theme-black;
+            box-shadow: 0 6px 24px 0 rgba(174, 174, 186, 0.16);
+
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        .title {
+            font-family: $font;
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .date {
+            position: relative;
+            padding-left: 20px;
+
+            &::before {
+                content: "\f017";
+                font-family: $font-awesome;
+                font-size: 14px;
+                font-weight: 400;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            p {
+                font-family: $font;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 20px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.team {
+    .section-head {
+        margin-bottom: 60px;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        padding-bottom: 35px;
+        border-bottom: 1px solid rgba(#000, .1);
+
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+
+        .profile {
+            flex: 0 0 250px;
+            max-width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            @media (max-width: 991px) {
+                flex: 0 0 150px;
+                max-width: 150px;
+                height: 150px;
+            }
+
+
+            img {
+                @include imgfit;
+            }
+        }
+
+        .text {
+            margin-top: 20px;
+
+            @media (min-width: 768px) {
+                padding-left: 40px;
+                margin-top: 0;
+            }
+
+            .heading {
+                font-size: 30px;
+                margin-bottom: 25px;
+                line-height: 28px;
+            }
+
+            p {
+                font-size: 17px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

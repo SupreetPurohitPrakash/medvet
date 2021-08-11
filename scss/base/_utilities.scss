@@ -413,3 +413,275 @@
     }
   }
 }
+
+.post {
+  &-title {
+    font-family: $font;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &-img {
+    position: relative;
+    margin: 15px 0;
+
+    &-md {
+      height: 250px;
+    }
+
+    &-lg {
+      height: 420px;
+    }
+
+    img {
+      @include imgfit;
+    }
+  }
+
+  &-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin: 40px 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-notice {
+    padding: 40px;
+    margin: 40px 0;
+    border-left: 5px solid $theme;
+    background-color: $theme-gray;
+
+    &-title {
+      color: $theme;
+      position: relative;
+      font-family: $font;
+      font-size: 25px;
+      font-weight: 700;
+      padding-left: 60px;
+      margin-bottom: 20px;
+
+      &::before {
+        content: "";
+        @include absoltopcenter;
+        left: 0;
+        width: 45px;
+        height: 3px;
+        background-color: $theme;
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 30px 0;
+    border-top: 1px solid rgba(#000, .15);
+
+    &-prev,
+    &-next {
+      position: relative;
+      width: 50%;
+
+      a {
+        display: block;
+      }
+
+      span {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+
+      h5 {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      @media (max-width: 767px) {
+        height: 40px;
+
+        span,
+        h5 {
+          display: none
+        }
+      }
+    }
+
+    &-icon {
+      @include absoltopcenter;
+      display: block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid #000;
+      border-radius: 50%;
+
+      img {
+        @include absolcenter;
+        width: 50%;
+        filter: brightness(0);
+      }
+
+      &,
+      img {
+        transition: all .3s ease-out;
+      }
+    }
+
+    a:hover &-icon {
+      background-color: $theme;
+      border-color: $theme;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &-prev {
+      padding-left: 60px;
+    }
+
+    &-prev &-icon {
+      left: 0;
+    }
+
+    &-next {
+      padding-right: 60px;
+      text-align: right;
+    }
+
+    &-next &-icon {
+      right: 0;
+    }
+
+    @media (max-width: 767px) {
+
+      &-prev,
+      &-next {
+        padding: 0 10px;
+      }
+
+      &-prev {
+        text-align: right;
+      }
+
+      &-next {
+        text-align: left;
+      }
+
+      &-icon {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+      }
+
+      &-prev &-icon {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.tags {
+  span {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    a {
+      display: block;
+      padding: 6px 12px;
+      color: $theme-black;
+      background-color: $theme-gray;
+      border: 1px solid $theme-gray;
+      border-radius: 4px;
+
+      &:hover {
+        color: #fff;
+        background-color: $theme;
+      }
+    }
+
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
+
+.entry {
+  &-title {
+    margin-bottom: 20px;
+  }
+
+  &-body {
+    p {
+      line-height: 32px;
+    }
+  }
+
+  &-footer {
+    margin: 40px 0;
+
+    @media (max-width: 767px) {
+      [class^="col-"] {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &-social {
+    &-item {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 18px;
+      text-align: center;
+      color: #fff;
+      background-color: $theme;
+      border-radius: 4px;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      a {
+        display: block;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+
+      &-facebook {
+        color: #fff;
+        background: linear-gradient(to right, #315297, #4666b3);
+      }
+
+      &-instagram {
+        color: #fff;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+      }
+
+      &-whatsapp {
+        color: #fff;
+        background: linear-gradient(to right, #44c054, #40bc50);
+      }
+    }
+  }
+}
