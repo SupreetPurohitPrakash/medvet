@@ -457,7 +457,13 @@
     }
 }
 
+.section-shop {
+    overflow: visible
+}
+
 .shop-filter-toggle {
+    position: sticky;
+    top: 150px;
     color: $theme;
     background-color: transparent;
     border: 2px solid $theme;
