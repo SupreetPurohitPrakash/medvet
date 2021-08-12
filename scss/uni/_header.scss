@@ -25,11 +25,14 @@
         }
     }
 
-    @media (max-width: 991px) {}
-
     .logo {
         width: 280px;
         max-width: 100%;
+
+        @media (max-width: 567px) {
+            width: 100%;
+            max-width: 60vw;
+        }
 
         img {
             width: 100%;
@@ -104,6 +107,7 @@
     &-bot {
         background-color: #fff;
         border-top: 1px solid rgba(#000, .1);
+        border-bottom: 1px solid rgba(#000, .1);
 
         @media (max-width: 991px) {
             z-index: 99;
@@ -117,7 +121,7 @@
             transition: all .4s ease-out;
 
             &:not(.active) {
-                left: -100%;
+                left: -101vw;
             }
 
             .container {

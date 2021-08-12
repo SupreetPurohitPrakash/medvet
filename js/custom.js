@@ -123,5 +123,30 @@ jQuery(document).ready(function ($) {
   headerSticky();
   $(window).resize(function () {
     headerSticky();
-  })
+  });
+
+  $('.shop-filter-toggle').click(function () {
+    const shopFilter = $('.shop-filter'),
+      shopFilterBG = $('.shop-filter-toggle-bg');
+
+    if (shopFilter.hasClass('active')) {
+      shopFilterBG.fadeOut();
+      shopFilter.removeClass('active');
+    } else {
+      shopFilterBG.fadeIn();
+      shopFilter.addClass('active');
+    }
+  });
+
+  $(document).mouseup(function (e) {
+    if ($('.shop-filter').hasClass('active')) {
+      const container = $('.shop-filter'),
+        shopFilterBG = $('.shop-filter-toggle-bg');;
+
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        shopFilterBG.fadeOut();
+        container.removeClass('active');
+      }
+    }
+  });
 });
