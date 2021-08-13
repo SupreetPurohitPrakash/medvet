@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
   <link rel="stylesheet" href="./css/slick.css" />
   <link rel="stylesheet" href="./css/slick-theme.css" />
+  <link rel="stylesheet" href="./css/lightcase.css" />
   <link rel="stylesheet" href="./css/style.min.css" />
 
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
@@ -94,7 +95,7 @@
             <li><a href="products.html">Products</a></li>
             <li><a href="news.html">News</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="#">Career</a></li>
+            <li><a href="career.html">Career</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -123,7 +124,7 @@
                   </div>
                   <p>Medvet Farma Pvt. Ltd. is a privately-held Nepal-based Importing & Marketing company located in
                     Tirpureshwor,Kathmandu was established in 2011</p>
-                  <a href="#" class="link-box has-longarrow">Book now!</a>
+                  <a href="about.html" class="link-box has-longarrow">Read more</a>
                 </div>
               </div>
             </div>
@@ -140,7 +141,7 @@
                   <p>This company is importin High Quality Vet Medicine and Products of International Brands such as
                     Dutchfarm International, Netherland; Megavet, India; Argano organic Ltd., India; Chembond Chemicals,
                     India.</p>
-                  <a href="#" class="link-box has-longarrow">Book now!</a>
+                  <a href="news.html" class="link-box has-longarrow">Read more</a>
                 </div>
               </div>
             </div>
@@ -150,7 +151,7 @@
       <div class="slider-cta">
         <div class="container">
           <p><strong>Join our team</strong> - We are looking for talented &amp; driven people to come work with us. <a
-              href="#">Available Positions</a></p>
+              href="./career.html#jobs">Available Positions</a></p>
         </div>
       </div>
     </section>
@@ -560,10 +561,66 @@
     </div>
   </footer>
 
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalNotice" tabindex="-1" role="dialog" aria-labelledby="modalNoticeTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="./images/4198540.jpg" alt="" class="w-100 d-block max-width--300 mx-auto">
+            </div>
+            <div class="col-lg-6">
+              <h2 class="heading"><span>Welcome to</span>Medvet Pharma Pvt. Ltd.</h2>
+              <div class="heading-underline"></div>
+              <p>Medvet Farma Pvt. Ltd. is a privately-held Nepal-based Importing & Marketing company located in
+                Tirpureshwor,Kathmandu was established in 2011</p>
+              <div class="icon-content mt-4">
+                <div class="icon">
+                  <img src="./images/icons/announcement.svg" alt="">
+                </div>
+                <div class="text">
+                  <h4>More than once</h4>
+                  <p>to track more data need all of them</p>
+                </div>
+              </div>
+              <h3 class="heading-sub">... Or you may</h3>
+              <div class="icon-content">
+                <div class="icon">
+                  <img src="./images/icons/announcement.svg" alt="">
+                </div>
+                <div class="text">
+                  <h4>More than once</h4>
+                  <p>to track more data need all of them</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 text-center mt-4">
+              <a href="./about.html" class="link-box has-longarrow">Know more about us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="./js/jquery-3.3.1.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/slick.min.js"></script>
+  <script src="./js/lightcase.js"></script>
   <script src="./js/custom.js"></script>
+  <script>
+    $(window).on('load', function () {
+      $('#modalNotice').modal('show');
+    });
+  </script>
 </body>
 
 </html>

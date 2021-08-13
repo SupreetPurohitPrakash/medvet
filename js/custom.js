@@ -78,6 +78,14 @@ jQuery(document).ready(function ($) {
 
   navDropdown();
 
+  if ($('a[data-rel^=lightcase]').length) {
+    $('a[data-rel^=lightcase]').lightcase({
+      iframe: {
+        frameborder: 0,
+      }
+    });
+  }
+
   function headerSticky() {
 
     const body = $('body'),
@@ -149,4 +157,5 @@ jQuery(document).ready(function ($) {
       }
     }
   });
+
 });
