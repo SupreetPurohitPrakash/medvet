@@ -270,6 +270,10 @@
                 color: $theme;
             }
         }
+
+        span a:hover {
+            color: #fff;
+        }
     }
 
     .title {

@@ -602,7 +602,7 @@
     margin-bottom: 10px;
 
     a {
-      display: block;
+      display: inline-block;
       padding: 6px 12px;
       color: $theme-black;
       background-color: $theme-gray;
@@ -698,5 +698,24 @@
       font-size: 14px;
       line-height: 25px;
     }
+  }
+}
+
+.page-item {
+
+  .page-link {
+    color: $theme;
+
+    &:hover {
+      background-color: $theme-accent;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &.active .page-link {
+    background-color: $theme;
   }
 }
