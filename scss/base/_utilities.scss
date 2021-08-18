@@ -701,6 +701,17 @@
   }
 }
 
+.pagination-wrap {
+  text-align: center;
+  margin-top: 30px;
+
+  .pagination {
+    display: inline-flex;
+    background-color: $theme-accent;
+    box-shadow: 0 0 6px rgba(#000, .15);
+  }
+}
+
 .page-item {
 
   .page-link {
