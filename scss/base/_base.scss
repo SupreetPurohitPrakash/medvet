@@ -60,6 +60,7 @@ p {
 .section {
   position: relative;
   padding: 75px 0;
+  overflow: hidden;
 
   &-head {
     margin-bottom: 40px;

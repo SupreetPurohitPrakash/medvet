@@ -156,17 +156,33 @@
                 margin-bottom: 5px;
             }
 
+            .pos {
+                span {
+                    color: #666;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+
             .detail {
                 color: $theme;
                 font-size: 15px;
-                margin-bottom: 5px;
+                margin: 3px 0;
 
-                span:not(:last-child) {
-                    margin-right: 15px;
+                span {
+                    font-weight: 500;
+
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
                 }
 
                 i {
                     font-size: 80%;
+
+                    &.fab {
+                        font-size: 120%;
+                    }
                 }
             }
 
